@@ -1,0 +1,9 @@
+mat-form-field {
+  width: 95%;
+}
+
+#personal-info-root {
+  width: 90vw;
+  min-width: 800px;
+  margin: auto;
+}

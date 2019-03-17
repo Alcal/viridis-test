@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserInfoService} from "src/services/user-info.service";
 import { UserInfo } from 'src/models/user-info.model';
 
 @Component({
@@ -8,15 +9,16 @@ import { UserInfo } from 'src/models/user-info.model';
 })
 export class PersonalInfoComponent implements OnInit {
 
-  userInfo = new UserInfo(null, null);
+  userInfo: UserInfo;
 
-  constructor() { }
+  constructor(private userInfoService: UserInfoService) { }
 
   ngOnInit() {
+    this.userInfo = this.userInfoService.getUserInfo();
   }
 
   showValues() {
-    console.log(this.userInfo.firstName, this.userInfo.lastName);
+    console.log(JSON.stringify(this.userInfo));
   }
 
 }

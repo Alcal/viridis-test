@@ -6,7 +6,8 @@ import {
   MatFormFieldModule,
   MatInputModule,
   MatCardModule,
-  MatButtonModule
+  MatButtonModule,
+  MatGridListModule,
 } from "@angular/material";
 
 @NgModule({
@@ -17,6 +18,7 @@ import {
     MatFormFieldModule,
     MatCardModule,
     MatButtonModule,
+    MatGridListModule,
     FormsModule,
   ],
   exports: [PersonalInfoComponent],
