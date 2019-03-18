@@ -1,63 +1,62 @@
-<mat-card id="personal-info-root">
+<mat-card>
+  <form (ngSubmit)="showValues()">
     <mat-card-title>
       Personal Information
     </mat-card-title>
     <mat-card-content>
-      <form (ngSubmit)="showValues()">
-        <mat-grid-list cols="12">
-          <mat-grid-tile colspan="4">
-            <mat-form-field appearance="fill">
-              <mat-label>First Name</mat-label>
-              <input
-                id="firstName"
-                matInput
-                [(ngModel)]="userInfo.firstName"
-                type="text"
-                name="firstName"
-              >
-            </mat-form-field>
-          </mat-grid-tile>
-          <mat-grid-tile colspan="4">
-            <mat-form-field appearance="fill">
-              <mat-label>Last Name</mat-label>
-              <input
-                id="lastName"
-                matInput
-                [(ngModel)]="userInfo.lastName"
-                type="text"
-                name="lastName">
-            </mat-form-field>
-          </mat-grid-tile>
-          <mat-grid-tile colspan="4" rowspan="2">
-            <input id="userImg" type="file">
-          </mat-grid-tile>
-          <mat-grid-tile colspan="8">
-            <mat-form-field appearance="fill">
-              <mat-label>E-mail</mat-label>
-              <input
-                id="email"
-                matInput
-                [(ngModel)]="userInfo.email"
-                type="email"
-                name="email">
-            </mat-form-field>
-          </mat-grid-tile>
-          <mat-grid-tile colspan="8">
-            <mat-form-field appearance="fill">
-              <mat-label>Phone Number</mat-label>
-              <input
-                id="phone"
-                matInput
-                [(ngModel)]="userInfo.phone"
-                type="tel"
-                name="phone">
-            </mat-form-field>
-          </mat-grid-tile>
-
-          <mat-grid-tile>
-            <button mat-button type="submit">Save</button>
-          </mat-grid-tile>
-        </mat-grid-list>
-      </form>
+      <mat-grid-list cols="12">
+        <mat-grid-tile colspan="4">
+          <mat-form-field appearance="fill">
+            <mat-label>First Name</mat-label>
+            <input
+              id="firstName"
+              matInput
+              [(ngModel)]="userInfo.firstName"
+              type="text"
+              name="firstName"
+            >
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="4">
+          <mat-form-field appearance="fill">
+            <mat-label>Last Name</mat-label>
+            <input
+              id="lastName"
+              matInput
+              [(ngModel)]="userInfo.lastName"
+              type="text"
+              name="lastName">
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="4" rowspan="3">
+          <input id="userImg" type="file">
+        </mat-grid-tile>
+        <mat-grid-tile colspan="8">
+          <mat-form-field appearance="fill">
+            <mat-label>E-mail</mat-label>
+            <input
+              id="email"
+              matInput
+              [(ngModel)]="userInfo.email"
+              type="email"
+              name="email">
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="8">
+          <mat-form-field appearance="fill">
+            <mat-label>Phone Number</mat-label>
+            <input
+              id="phone"
+              matInput
+              [(ngModel)]="userInfo.phone"
+              type="tel"
+              name="phone">
+          </mat-form-field>
+        </mat-grid-tile>
+      </mat-grid-list>
     </mat-card-content>
+    <mat-card-actions>
+      <button mat-button type="submit">Save</button>
+    </mat-card-actions>
+  </form>
 </mat-card>

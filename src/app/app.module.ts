@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { PersonalInfoModule } from './personal-info/personal-info.module';
+import { PortfolioModule } from "./portfolio/portfolio.module";
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -14,6 +15,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     PersonalInfoModule,
+    PortfolioModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
