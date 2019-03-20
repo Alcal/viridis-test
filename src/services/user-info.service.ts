@@ -9,6 +9,10 @@ export class UserInfoService {
   constructor() { }
 
   getUserInfo(): UserInfo {
-    return new UserInfo('Donca', 'Matic', 'magictavern@puppies.supplies');
+    return new UserInfo(
+      'Donca',
+      'Matic',
+      'magictavern@puppies.supplies',
+      ['acalo91@gmail', 'google@google.google', 'alex@alex.alex', 'el@señor.com', 'a@b.c', 'acalo91@gmail', 'google@google.google', 'alex@alex.alex', 'el@señor.com', 'a@b.c', 'acalo91@gmail', 'google@google.google', 'alex@alex.alex', 'el@señor.com', 'a@b.c', 'acalo91@gmail', 'google@google.google', 'alex@alex.alex', 'el@señor.com', 'a@b.c']);
   }
 }

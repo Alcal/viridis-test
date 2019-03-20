@@ -1,0 +1,49 @@
+<form (ngSubmit)="showValues()">
+  <mat-card-title>
+    Personal Information
+  </mat-card-title>
+  <mat-card-content>
+        <input id="userImg" type="file">
+        <mat-form-field appearance="fill">
+          <mat-label>First Name</mat-label>
+          <input
+            id="firstName"
+            matInput
+            [(ngModel)]="userInfo.firstName"
+            type="text"
+            name="firstName"
+          >
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Last Name</mat-label>
+          <input
+            id="lastName"
+            matInput
+            [(ngModel)]="userInfo.lastName"
+            type="text"
+            name="lastName">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Phone Number</mat-label>
+          <input
+            id="phone"
+            matInput
+            [(ngModel)]="userInfo.phone"
+            type="tel"
+            name="phone">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>E-mail</mat-label>
+          <input
+            id="email"
+            matInput
+            [(ngModel)]="userInfo.email"
+            type="email"
+            name="email">
+        </mat-form-field>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-flat-button color="primary" type="submit">Save</button>
+    <button mat-button color="warn" type="button" (click)="cancelEdit()">Cancel</button>
+  </mat-card-actions>
+</form>

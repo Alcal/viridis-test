@@ -8,10 +8,14 @@ import {
   MatCardModule,
   MatButtonModule,
   MatGridListModule,
+  MatIconModule,
+  MatListModule,
 } from "@angular/material";
+import { EditPersonalInfoComponent } from './edit-personal-info/edit-personal-info.component';
+import { ViewPersonalInfoComponent } from './view-personal-info/view-personal-info.component';
 
 @NgModule({
-  declarations: [PersonalInfoComponent],
+  declarations: [PersonalInfoComponent, EditPersonalInfoComponent, ViewPersonalInfoComponent],
   imports: [
     CommonModule,
     MatInputModule,
@@ -20,6 +24,8 @@ import {
     MatButtonModule,
     MatGridListModule,
     FormsModule,
+    MatIconModule,
+    MatListModule,
   ],
   exports: [PersonalInfoComponent],
   entryComponents: [PersonalInfoComponent]

@@ -3,10 +3,16 @@
     Welcome to {{ title }}!
   </h1>
 </div>
-<div class="section-root">
-  <viridis-personal-info></viridis-personal-info>
-</div>
-<div class="section-root">
-  <viridis-portfolio></viridis-portfolio>
-</div>
+<mat-grid-list cols="12" class="section-root" [rowHeight]="screenHeight">
+  <mat-grid-tile colspan="3">
+    <div class="section-root">
+      <viridis-personal-info></viridis-personal-info>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="9">
+    <div class="section-root">
+      <viridis-portfolio></viridis-portfolio>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
 <router-outlet></router-outlet>

@@ -1,0 +1,21 @@
+<mat-card-content>
+      <img id="profile-img" [src]="userInfo.imgUrl || defaultProfile" />
+      <div class="info-title">
+        <h2 class="mat-title">Hello, {{userInfo.firstName}} {{userInfo.lastName}}!</h2>
+        <p><mat-icon color="accent"aria-hidden="true">phone</mat-icon>Your phone:{{userInfo.phone || 'xxxxxxxxxx'}}</p>
+        <p><mat-icon color="primary" >mail</mat-icon> Your emails</p>
+          <div id="mail-list">
+            <ul>
+              <li>{{userInfo.email}}</li>
+              <mat-divider [inset]="true"></mat-divider>
+              <li *ngFor="let email of userInfo.alternateEmails">
+                {{email}}
+                <mat-divider [inset]="true"></mat-divider>
+              </li>
+            </ul>
+          </div>
+      </div>
+</mat-card-content>
+<mat-card-actions>
+  <button mat-flat-button color="primary" (click)="edit()">Edit</button>
+</mat-card-actions>

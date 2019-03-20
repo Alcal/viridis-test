@@ -10,15 +10,18 @@ import { UserInfo } from 'src/models/user-info.model';
 export class PersonalInfoComponent implements OnInit {
 
   userInfo: UserInfo;
+  isEditing: boolean;
 
-  constructor(private userInfoService: UserInfoService) { }
+  constructor(private userInfoService: UserInfoService) {
+  }
 
   ngOnInit() {
     this.userInfo = this.userInfoService.getUserInfo();
+    this.isEditing = false;
   }
 
-  showValues() {
-    console.log(JSON.stringify(this.userInfo));
+  setEdition= (isEditing: boolean) => {
+    this.isEditing = isEditing;
   }
 
 }
