@@ -3,6 +3,6 @@
     <viridis-view-personal-info [userInfo]="userInfo" [onEdit]="setEdition"></viridis-view-personal-info>
   </ng-template>
   <ng-template #edit>
-    <viridis-edit-personal-info  [userInfo]="userInfo" [onEdit]="setEdition"></viridis-edit-personal-info>
+    <viridis-edit-personal-info [userInfo]="userInfo" [onSave]="getUserInfo" [onEditCancel]="setEdition"></viridis-edit-personal-info>
   </ng-template>
 </mat-card>

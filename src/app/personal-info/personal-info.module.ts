@@ -10,7 +10,10 @@ import {
   MatGridListModule,
   MatIconModule,
   MatListModule,
+  MatChipsModule,
+  MatTooltipModule,
 } from "@angular/material";
+import { MaterialFileInputModule } from 'ngx-material-file-input';
 import { EditPersonalInfoComponent } from './edit-personal-info/edit-personal-info.component';
 import { ViewPersonalInfoComponent } from './view-personal-info/view-personal-info.component';
 
@@ -26,6 +29,9 @@ import { ViewPersonalInfoComponent } from './view-personal-info/view-personal-in
     FormsModule,
     MatIconModule,
     MatListModule,
+    MatChipsModule,
+    MatTooltipModule,
+    MaterialFileInputModule
   ],
   exports: [PersonalInfoComponent],
   entryComponents: [PersonalInfoComponent]

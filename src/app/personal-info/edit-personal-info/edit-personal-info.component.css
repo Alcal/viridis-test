@@ -1,3 +1,8 @@
 mat-form-field {
   width: calc(100% - 8px);
 }
+
+.red-tooltip {
+  color: white;
+  background: #f44336;
+}

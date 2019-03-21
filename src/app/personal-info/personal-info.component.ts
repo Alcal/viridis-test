@@ -20,6 +20,11 @@ export class PersonalInfoComponent implements OnInit {
     this.isEditing = false;
   }
 
+  getUserInfo = () => {
+    this.userInfo = this.userInfoService.getUserInfo();
+    this.isEditing = false;
+  }
+
   setEdition= (isEditing: boolean) => {
     this.isEditing = isEditing;
   }
