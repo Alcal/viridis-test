@@ -1,3 +1,7 @@
+.app-root {
+  width: 80%;
+  margin: auto;
+}
 
 .section-root {
   width: calc(100% - 65px);

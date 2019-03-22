@@ -8,8 +8,13 @@ import {
   MatButtonModule,
   MatGridListModule,
   MatExpansionModule,
+  MatIconModule,
+  MatTooltipModule,
+  MatRippleModule,
+  MatChipsModule,
 } from "@angular/material";
 import { ClassComponent } from './class/class.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [PortfolioComponent, ClassComponent],
@@ -21,6 +26,11 @@ import { ClassComponent } from './class/class.component';
     MatButtonModule,
     MatGridListModule,
     MatExpansionModule,
+    MatIconModule,
+    MatTooltipModule,
+    MatRippleModule,
+    FormsModule,
+    MatChipsModule,
   ],
   exports: [PortfolioComponent],
   entryComponents: [PortfolioComponent]

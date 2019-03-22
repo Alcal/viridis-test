@@ -1,4 +1,15 @@
-<mat-card id="root">
-  <mat-card-title>Welcom to your online Portfolio</mat-card-title>
-  <viridis-class *ngFor="let class of classes" [class]="class"></viridis-class>
-</mat-card>
+<h2>Welcome to your online Portfolio</h2>
+<viridis-class *ngFor="let class of classes; index as i" [class]="class" [index]="i"></viridis-class>
+<button
+  id="add-button"
+  matRipple
+  matTooltip="Add new class"
+  matTooltipPosition="left"
+  matRippleRadius="100"
+  matRippleColor="rgba(127, 127, 127, 0.4)"
+  matRippleRadius="150"
+  mat-fab
+  (click)="addClass()"
+>
+  <mat-icon color="white">add</mat-icon>
+</button>

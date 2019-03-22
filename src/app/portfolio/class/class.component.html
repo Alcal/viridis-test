@@ -1,14 +1,38 @@
-<mat-expansion-panel>
-  <mat-expansion-panel-header>
-    <mat-panel-title>
-      {{class.name}}
-    </mat-panel-title>
-    <mat-panel-description>
-      {{class.description}}
-    </mat-panel-description>
-  </mat-expansion-panel-header>
-  <mat-action-row>
-    <button mat-flat-button color="primary">Save</button>
-    <button mat-button color="warn">Delete</button>
-  </mat-action-row>
-</mat-expansion-panel>
+<mat-card>
+  <form>
+    <mat-card-header>
+      <mat-card-title>
+        {{class.name}}
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field class="description">
+        <textarea
+          [id]="'class.'+index"
+          matInput
+          [(ngModel)]="class.description"
+          type="text"
+          name="description"
+        ></textarea>
+      </mat-form-field>
+    </mat-card-content>
+    <mat-chip-list #skills>
+      <mat-chip
+        *ngFor="let skill of class.skills; index as i"
+        (removed)="removeSkill(i)"
+      >
+        {{skill}}
+        <mat-icon matChipRemove>cancel</mat-icon>
+      </mat-chip>
+      <input
+        [matChipInputAddOnBlur]="true"
+        [matChipInputFor]="skills"
+        (matChipInputTokenEnd)="addSkill($event)"
+      >
+    </mat-chip-list>
+    <mat-card-actions>
+      <button mat-flat-button color="primary">Save</button>
+      <button mat-button color="warn">Delete</button>
+    </mat-card-actions>
+  </form>
+</mat-card>
