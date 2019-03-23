@@ -8,6 +8,7 @@ import { PortfolioModule } from "./portfolio/portfolio.module";
 import { AppComponent } from './app.component';
 import { MatGridListModule } from "@angular/material";
 import { HttpClientModule } from '@angular/common/http';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     MatGridListModule,
     HttpClientModule,
+    FlexLayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

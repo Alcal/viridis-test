@@ -19,7 +19,6 @@
 
 #mail-list {
   display: inline-block;
-  overflow-y: scroll;
   max-height: 80px;
 }
 

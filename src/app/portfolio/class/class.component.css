@@ -2,6 +2,31 @@ mat-card {
   margin: 10px auto;
 }
 
+mat-card:hover .title-button {
+  display: unset;
+}
+
+.class-title {
+  width: 100%;
+}
+
+.title-button {
+  position: absolute;
+  right:  10%;
+  display: none;
+}
+
 .description {
   width: 90%;
+}
+.printable {
+  display: none;
+}
+@media print {
+  .printable {
+    display: unset;
+  }
+  .class-root {
+    display: none;
+  }
 }

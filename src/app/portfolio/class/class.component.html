@@ -1,38 +1,66 @@
-<mat-card>
+<mat-card class="class-root">
   <form>
     <mat-card-header>
-      <mat-card-title>
-        {{class.name}}
+      <mat-card-title class="class-title">
+        <mat-form-field>
+          <input
+            [id]="'classTitle.'+index"
+            matInput
+            [(ngModel)]="class.name"
+            type="text"
+            name="title"
+            placeholder="Add a nice title"
+          />
+        </mat-form-field>
+        <button (click)="delete(index)" mat-icon-button class="title-button" color="warn">
+          <mat-icon>delete</mat-icon>
+        </button>
       </mat-card-title>
     </mat-card-header>
+    <mat-label>Description</mat-label>
     <mat-card-content>
       <mat-form-field class="description">
         <textarea
-          [id]="'class.'+index"
+          [id]="'classDescription.'+index"
           matInput
           [(ngModel)]="class.description"
           type="text"
           name="description"
+          placeholder="Now add a juicy description"
         ></textarea>
       </mat-form-field>
+      <mat-form-field>
+      <mat-label>Skills</mat-label>
+        <mat-chip-list #skills>
+          <mat-chip
+            *ngFor="let skill of class.skills; index as i"
+            (removed)="removeSkill(i)"
+          >
+            {{skill}}
+            <mat-icon matChipRemove>cancel</mat-icon>
+          </mat-chip>
+          <input
+            placeholder="Lastly, some cool skills"
+            [matChipInputAddOnBlur]="true"
+            [matChipInputFor]="skills"
+            (matChipInputTokenEnd)="addSkill($event)"
+          >
+        </mat-chip-list>
+      </mat-form-field>
     </mat-card-content>
-    <mat-chip-list #skills>
-      <mat-chip
-        *ngFor="let skill of class.skills; index as i"
-        (removed)="removeSkill(i)"
-      >
-        {{skill}}
-        <mat-icon matChipRemove>cancel</mat-icon>
-      </mat-chip>
-      <input
-        [matChipInputAddOnBlur]="true"
-        [matChipInputFor]="skills"
-        (matChipInputTokenEnd)="addSkill($event)"
-      >
-    </mat-chip-list>
-    <mat-card-actions>
-      <button mat-flat-button color="primary">Save</button>
-      <button mat-button color="warn">Delete</button>
-    </mat-card-actions>
   </form>
 </mat-card>
+<div class="printable">
+  <mat-card>
+    <mat-card-title>
+      {{class.name}}
+    </mat-card-title>
+    <mat-card-content>
+      <p>{{class.description}}</p>
+      <label>Skills:</label>
+      <ul>
+        <li *ngFor="let skill of class.skills">{{skill}}</li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -9,3 +9,12 @@
   right: 100px;
   color: white;
 }
+
+@media print {
+  #add-button{
+    display: none;
+  }
+  mat-card {
+    display: none;
+  }
+}

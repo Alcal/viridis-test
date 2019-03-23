@@ -1,9 +1,9 @@
 <mat-card-content>
-  <img id="profile-img" [src]="userInfo.imgUrl || defaultProfile" />
+  <img id="profile-img" [src]="userInfo.imgUrl || defaultProfile"/>
   <mat-divider></mat-divider>
     <div class="info-title">
       <h2 class="mat-title">Hello, {{userInfo.firstName}} {{userInfo.lastName}}!</h2>
-      <p><mat-icon inline color="accent"aria-hidden="true">phone</mat-icon> {{userInfo.phone || 'xxxxxxxxxx'}}</p>
+      <p><mat-icon inline color="accent"aria-hidden="true">phone</mat-icon> {{userInfo.phone || '--'}}</p>
       <p><mat-icon inline color="primary" >mail</mat-icon> {{userInfo.email}}</p>
         <div id="mail-list">
           <ul>

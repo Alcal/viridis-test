@@ -10,8 +10,7 @@ export class ClassService {
 
   getClasses(): Class[] {
     return [
-      new Class('Dark Arts', 'Learn how to handle obscure wizarding skills', ['flight', 'power']),
-      new Class('Marxism', 'Actually, there will be no class here', ['equality', 'empowerment'])
+      new Class('Example Class', 'This is just an example description, feel free to erase this class when you get started', ['example skill'])
     ];
   }
 }

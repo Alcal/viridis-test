@@ -6,3 +6,20 @@
     <viridis-edit-personal-info [userInfo]="userInfo" [onSave]="getUserInfo" [onEditCancel]="setEdition"></viridis-edit-personal-info>
   </ng-template>
 </mat-card>
+<div class="printable">
+  <mat-card>
+    <mat-card-title><h5>{{userInfo.firstName}} {{userInfo.lastName}}</h5></mat-card-title>
+    <mat-card-content>
+      <p><mat-icon inline color="accent"aria-hidden="true">phone</mat-icon> {{userInfo.phone || 'xxxxxxxxxx'}}</p>
+      <p><mat-icon inline color="primary" >mail</mat-icon> {{userInfo.email}}</p>
+      <div id="mail-list">
+        <ul>
+          <li *ngFor="let email of userInfo.alternateEmails">
+            <mat-icon inline>mail</mat-icon>{{email}}
+            <mat-divider [inset]="true"></mat-divider>
+          </li>
+        </ul>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

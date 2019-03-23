@@ -3,8 +3,6 @@
     Personal Information
   </mat-card-title>
   <mat-card-content>
-    <label>Upload Image</label>
-    <input id="userImg" type="file" accept="image/gif, image/jpg, image/png, image/jpeg">
     <mat-form-field appearance="fill">
       <mat-label>First Name</mat-label>
       <input
@@ -52,7 +50,7 @@
       <input
         [matChipInputAddOnBlur]="true"
         [matChipInputFor]="alternateEmails"
-        (matChipInputTokenEnd)="addEmail($event.value)"
+        (matChipInputTokenEnd)="addEmail($event)"
       >
     </mat-chip-list>
     </mat-form-field>

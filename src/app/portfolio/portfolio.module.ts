@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PortfolioComponent } from './portfolio.component';
+import { PortfolioComponent, ClassDeleteSnackBarComponent } from './portfolio.component';
 import {
   MatFormFieldModule,
   MatInputModule,
@@ -12,12 +12,13 @@ import {
   MatTooltipModule,
   MatRippleModule,
   MatChipsModule,
+  MatSnackBarModule,
 } from "@angular/material";
 import { ClassComponent } from './class/class.component';
 import {FormsModule} from "@angular/forms";
 
 @NgModule({
-  declarations: [PortfolioComponent, ClassComponent],
+  declarations: [PortfolioComponent, ClassComponent, ClassDeleteSnackBarComponent],
   imports: [
     CommonModule,
     MatFormFieldModule,
@@ -31,8 +32,9 @@ import {FormsModule} from "@angular/forms";
     MatRippleModule,
     FormsModule,
     MatChipsModule,
+    MatSnackBarModule,
   ],
   exports: [PortfolioComponent],
-  entryComponents: [PortfolioComponent]
+  entryComponents: [PortfolioComponent, ClassDeleteSnackBarComponent]
 })
 export class PortfolioModule { }

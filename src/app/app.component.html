@@ -1,13 +1,14 @@
-<mat-grid-list cols="12" class="app-root" [rowHeight]="screenHeight">
-  <mat-grid-tile colspan="3">
-    <div class="section-root">
-      <viridis-personal-info></viridis-personal-info>
-    </div>
-  </mat-grid-tile>
-  <mat-grid-tile colspan="9">
-    <div class="section-root">
-      <viridis-portfolio></viridis-portfolio>
-    </div>
-  </mat-grid-tile>
-</mat-grid-list>
+<div
+  fxLayout="row"
+  fxLayoutAlign="center stretch"
+  class="app-root"
+  fxLayoutGap="8px"
+>
+  <div fxFlex="25" class="section-root">
+    <viridis-personal-info></viridis-personal-info>
+  </div>
+  <div class="section-root">
+    <viridis-portfolio></viridis-portfolio>
+  </div>
+</div>
 <router-outlet></router-outlet>
